@@ -1,0 +1,19 @@
+# Instalar pacotes, se necessário
+if(!require(readxl)) install.packages("readxl")
+if(!require(ggplot2)) install.packages("ggplot2")
+if(!require(sf)) install.packages("sf")
+if(!require(spatstat)) install.packages("spatstat")
+if(!require(tmap)) install.packages("tmap")
+
+# Carregar pacotes
+library(readxl)
+library(ggplot2)
+library(sf)
+library(spatstat)
+library(tmap)
+
+# Ler o arquivo Excel
+dados <- read_excel("/mnt/data/base.xlsx")
+
+# Visualizar as primeiras linhas do arquivo para inspecionar
+head(dados)
